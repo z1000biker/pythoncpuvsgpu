@@ -30,3 +30,96 @@ This project benchmarks and compares the performance of CPU vs GPU for machine l
 - At least 8GB system RAM
 
 
+📊 Understanding the Output
+The program generates three visualizations:
+
+inference_comparison.png - Main dashboard with 4 subplots:
+
+Inference time distribution (box plot)
+
+Throughput comparison (bar chart)
+
+Batch size performance (line chart)
+
+Speedup factor (line chart)
+
+batch_size_comparison.png - Detailed analysis of different batch sizes:
+
+Shows how performance scales with batch size
+
+Identifies optimal batch size for your GPU
+
+performance_summary.png - Executive summary report:
+
+Comparison table with key metrics
+
+Device specifications
+
+Conclusions and recommendations
+
+🖥️ Interactive Viewer Controls
+When the benchmark completes, an interactive viewer opens with:
+
+text
+Image Viewer Controls:
+----------------------------------------
+• Use LEFT/RIGHT arrow keys or buttons to navigate
+• Press 'ESC' or click 'Exit Viewer' to close
+• Current image will be shown in full screen
+----------------------------------------
+Keyboard Shortcuts
+Left Arrow / 'p' - Previous image
+
+Right Arrow / 'n' - Next image
+
+ESC / 'q' - Exit viewer
+
+🔍 Technical Details
+Neural Network Architecture
+The benchmark uses a custom CNN with:
+
+3 convolutional layers (64, 128, 256 filters)
+
+Max pooling after each layer
+
+2 fully connected layers
+
+ReLU activations
+
+Dropout regularization
+
+Total parameters: 8,765,066
+
+Test Configuration
+Input size: 64×64 RGB images
+
+Batch sizes tested: [1, 2, 4, 8, 16]
+
+Warmup iterations: 10
+
+Measurement iterations: 50
+
+Precision: FP32 (single precision)
+
+🎯 Optimization Tips for GTX 750 Ti
+Memory Management
+Maximum batch size: 16 (for 2GB VRAM)
+
+Optimal batch size: 8 (best speed/VRAM balance)
+
+VRAM usage: ~80MB per batch
+
+Performance Tuning
+Close other applications to free VRAM
+
+Use smaller models for real-time applications
+
+Batch processing improves GPU utilization
+
+Monitor temperatures during extended runs
+
+Expected Performance
+Model Size	CPU FPS	GPU FPS	Speedup	VRAM Usage
+Small (8M params)	20-30	100-150	4-6x	~80MB
+Medium (50M params)	3-5	20-30	5-8x	~500MB
+Large (200M params)	1-2	8-12	6-10x	~1.5GB
