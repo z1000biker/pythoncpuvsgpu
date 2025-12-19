@@ -20,13 +20,6 @@ This project benchmarks and compares the performance of CPU vs GPU for machine l
 - ✅ **Professional reporting** with multiple visualization formats
 - ✅ **Automatic GPU detection** and configuration
 
-## 📊 Performance Results (GTX 750 Ti Example)
-
-| Metric | CPU | GPU | Speedup |
-|--------|-----|-----|---------|
-| **Inference Time** | 36.71 ms | 7.41 ms | **4.95x** |
-| **Throughput** | 27.24 FPS | 134.97 FPS | **4.95x** |
-| **Batch 16 Speedup** | 78.24 ms | 11.23 ms | **6.97x** |
 
 ## 🚀 Quick Start
 
