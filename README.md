@@ -36,17 +36,10 @@ This project benchmarks and compares the performance of CPU vs GPU for machine l
 - NVIDIA drivers installed
 - At least 8GB system RAM
 
-### Installation
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/z1000biker/pythoncpuvsgpu.git
-cd pythoncpuvsgpu# pythoncpuvsgpu
-
 
 ### Command Line Options
 The program runs automatically with default settings optimized for GTX 750 Ti. For custom configurations, modify the following variables in ml_comparison_display.py:
-```bash
+
 # Line 220-221 in ml_comparison_display.py
 batch_size = 8          # Change for different batch sizes
 input_shape = (64, 64)  # Change input resolution
